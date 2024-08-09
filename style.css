@@ -53,3 +53,32 @@ img{
     padding: 1rem;
     border-radius: 1rem;
   }
+
+@media (max-width:1000px) {
+    h1{
+        font-size: 2rem ;
+    }
+    .choices{
+       gap: 10vw;
+    }
+    .choice{
+        width: 20vw;
+    }
+    img{
+        width: 20vw;
+    }
+    .score-board{
+        font-size: 1.5rem;
+    }
+    #user-score , #comp-score{
+        font-size: 3rem;
+    }
+    .msg-container{
+        margin-top: 30vh;
+        height: fit-content;
+    }
+    #msg{
+        font-size: 1rem;
+    }
+
+}
