@@ -5,10 +5,11 @@ let compScore=0 ;
 const choices = document.querySelectorAll(".choice") ;
 const msg=document.querySelector("#msg");
 const userScorePara = document.querySelector("#user-score") ; 
-const compScorePara = document.querySelector("#comp-score") ; 
+const compScorePara = document.querySelector("#comp-score") ;
+const showingCompChoice=document.querySelector(".showCompChoice") ; 
 
 const genCompChoice = ()=>{
-    const options=["rock" , "paper" , "scissors"] ;
+    const options=["rock" , "paper" , "scissor"] ;
     const randIdx = Math.floor(Math.random() *3) ;
     return options[randIdx] ;
 } ;
@@ -38,8 +39,9 @@ const drawGame=()=>{
 const playGame =(userChoice)=>{
     // console.log("user choice = " , userChoice) ;
     const compChoice = genCompChoice() ;
+    showingCompChoice.innerHTML = `<img src='images/${compChoice}1.jpg' alt='Computer choice: ${compChoice}' width='100' >`;
     // console.log("computer choice =" , compChoice) ;
-    if(userChoice===compChoice){
+    if(userChoice === compChoice){
         // game draw
         drawGame() ;
     }
@@ -67,3 +69,4 @@ choices.forEach((choice)=>{
 
     })
 })
+
